@@ -23,13 +23,21 @@ def teardown_db(exception):
     storage.close()
 
 
+<<<<<<< HEAD
 @app.route('/100-hbnb')
+=======
+@app.route('/100-hbnb/')
+>>>>>>> a85fedd3b98b10421141458e39af10d7d833c5f4
 def hbnb_filters(the_id=None):
     """
     handles request to custom template with states, cities & amentities
     """
+<<<<<<< HEAD
     state_objs = storage.all('State').values()
     states = dict([state.name, state] for state in state_objs)
+=======
+    states = storage.all('State').values()
+>>>>>>> a85fedd3b98b10421141458e39af10d7d833c5f4
     amens = storage.all('Amenity').values()
     places = storage.all('Place').values()
     users = dict([user.id, "{} {}".format(user.first_name, user.last_name)]
